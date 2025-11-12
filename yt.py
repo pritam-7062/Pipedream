@@ -68,7 +68,7 @@ def build_keyboard(formats, video_id):
     kb.add(*buttons)
     return kb
 
-async def fetch_cookies_headers(url: str) -> Dict[str, Any]:
+def fetch_cookies_headers(url: str) -> Dict[str, Any]:
     """Use curl_cffi impersonation to fetch headers and cookies for yt_dlp."""
     logger.info("Fetching headers via impersonation for %s", url)
     r = session.get(url)
